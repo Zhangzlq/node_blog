@@ -1,27 +1,12 @@
-# EJblog
-Nodejs(Express)+MongoDB+jQuery+Bootstrap Personal blog.
+##blog
 
-顾名思义   Express (E)    jQuery(J)
+Nodejs(Express)+MongoDB+jQuery+Bootstrap Personal blog.
 
 ## 这是一个开源的个人博客系统。
 
-个人纯碎为了练习nodejs而做出来的一个博客，给个Star就是我最大的动力！
+个人用来练手，经过改进的博客~
 
-该系统已停止更新维护，等我有机会接触NodeJS再来写关于NodeJS的博客。
-
-## 用Node.JS+MongoDB搭建个人博客系列 逐行代码分析：
-
-### [用Node.JS+MongoDB搭建个人博客（成品展示）](http://www.cnblogs.com/scottjeremy/p/7027790.html)
-
-### [用Node.JS+MongoDB搭建个人博客（安装环境）（一）](http://www.cnblogs.com/scottjeremy/p/6993480.html)
-
-### [用Node.JS+MongoDB搭建个人博客（app.js接口文件）（二）](http://www.cnblogs.com/scottjeremy/p/7238131.html)
-
-### [用Node.JS+MongoDB搭建个人博客（model目录）（三）](http://www.cnblogs.com/scottjeremy/p/7245802.html)
-
-### [用Node.JS+MongoDB搭建个人博客（万众期待的router.js）（四）](http://www.cnblogs.com/scottjeremy/p/7238941.html)
-
-### [用Node.JS+MongoDB搭建个人博客（页面模板）（五）（结束）](http://www.cnblogs.com/scottjeremy/p/7250684.html)
+源代码在这里[基于Nodejs+Mongo+jQuery+Bootstrap构建个人博客系统。](https://github.com/scottjeremy/EJblog)
 
 ## 技术选型：
 
@@ -77,4 +62,3 @@ package.json 文件依赖配置包
   node app.js
 ```
 #### 登陆后台 帐号：123123 密码：123123
-"# node_blog" 
