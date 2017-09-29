@@ -1,0 +1,6 @@
+logpath=/home/blog/data/mongo.log
+#端口号
+port=3389
+
+#日志输出方式 logappend=true
+dbpath=/home/blog/data

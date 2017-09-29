@@ -1,0 +1,253 @@
+2017-09-18T21:15:13.907+0800 I CONTROL  [initandlisten] MongoDB starting : pid=10683 port=27017 dbpath=/home/blog/data 64-bit host=iz2zehs1zhvy5c0t77dkqsz
+2017-09-18T21:15:13.907+0800 I CONTROL  [initandlisten] db version v3.4.5
+2017-09-18T21:15:13.907+0800 I CONTROL  [initandlisten] git version: 520b8f3092c48d934f0cd78ab5f40fe594f96863
+2017-09-18T21:15:13.907+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-09-18T21:15:13.907+0800 I CONTROL  [initandlisten] modules: none
+2017-09-18T21:15:13.907+0800 I CONTROL  [initandlisten] build environment:
+2017-09-18T21:15:13.907+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-09-18T21:15:13.907+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-09-18T21:15:13.907+0800 I CONTROL  [initandlisten] options: { processManagement: { fork: true }, storage: { dbPath: "/home/blog/data" }, systemLog: { destination: "file", path: "/home/blog/data/mongo.log" } }
+2017-09-18T21:15:13.928+0800 I -        [initandlisten] Detected data files in /home/blog/data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-09-18T21:15:13.928+0800 I STORAGE  [initandlisten] 
+2017-09-18T21:15:13.928+0800 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-09-18T21:15:13.928+0800 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-09-18T21:15:13.928+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=407M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] 
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] 
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] 
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] 
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] 
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. rlimits set to 7279 processes, 65535 files. Number of processes should be at least 32767.5 : 0.5 times number of files.
+2017-09-18T21:15:14.182+0800 I CONTROL  [initandlisten] 
+2017-09-18T21:15:14.184+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/blog/data/diagnostic.data'
+2017-09-18T21:15:14.185+0800 I NETWORK  [thread1] waiting for connections on port 27017
+2017-09-18T21:15:16.846+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49070 #1 (1 connection now open)
+2017-09-18T21:15:16.848+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49072 #2 (2 connections now open)
+2017-09-18T21:15:16.848+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:49070 conn1: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:15:16.865+0800 I -        [conn1] end connection 127.0.0.1:49070 (2 connections now open)
+2017-09-18T21:15:16.865+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:49072 conn2: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:15:16.869+0800 I -        [conn2] end connection 127.0.0.1:49072 (1 connection now open)
+2017-09-18T21:15:28.482+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49074 #3 (1 connection now open)
+2017-09-18T21:15:28.482+0800 I NETWORK  [conn3] received client metadata from 127.0.0.1:49074 conn3: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:15:28.486+0800 I -        [conn3] end connection 127.0.0.1:49074 (1 connection now open)
+2017-09-18T21:15:29.591+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49076 #4 (1 connection now open)
+2017-09-18T21:15:29.591+0800 I NETWORK  [conn4] received client metadata from 127.0.0.1:49076 conn4: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:15:29.594+0800 I -        [conn4] end connection 127.0.0.1:49076 (1 connection now open)
+2017-09-18T21:15:31.737+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49078 #5 (1 connection now open)
+2017-09-18T21:15:31.738+0800 I NETWORK  [conn5] received client metadata from 127.0.0.1:49078 conn5: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:15:31.741+0800 I -        [conn5] end connection 127.0.0.1:49078 (1 connection now open)
+2017-09-18T21:27:04.742+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49086 #6 (1 connection now open)
+2017-09-18T21:27:04.743+0800 I NETWORK  [conn6] received client metadata from 127.0.0.1:49086 conn6: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:04.763+0800 I -        [conn6] end connection 127.0.0.1:49086 (1 connection now open)
+2017-09-18T21:27:04.763+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49088 #7 (1 connection now open)
+2017-09-18T21:27:04.769+0800 I NETWORK  [conn7] received client metadata from 127.0.0.1:49088 conn7: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:04.772+0800 I -        [conn7] end connection 127.0.0.1:49088 (1 connection now open)
+2017-09-18T21:27:05.622+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49090 #8 (1 connection now open)
+2017-09-18T21:27:05.623+0800 I NETWORK  [conn8] received client metadata from 127.0.0.1:49090 conn8: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:05.630+0800 I -        [conn8] end connection 127.0.0.1:49090 (1 connection now open)
+2017-09-18T21:27:06.329+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49092 #9 (1 connection now open)
+2017-09-18T21:27:06.330+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49094 #10 (2 connections now open)
+2017-09-18T21:27:06.330+0800 I NETWORK  [conn10] received client metadata from 127.0.0.1:49094 conn10: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:06.333+0800 I NETWORK  [conn9] received client metadata from 127.0.0.1:49092 conn9: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:06.335+0800 I -        [conn10] end connection 127.0.0.1:49094 (2 connections now open)
+2017-09-18T21:27:06.336+0800 I -        [conn9] end connection 127.0.0.1:49092 (1 connection now open)
+2017-09-18T21:27:06.852+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49096 #11 (1 connection now open)
+2017-09-18T21:27:06.853+0800 I NETWORK  [conn11] received client metadata from 127.0.0.1:49096 conn11: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:06.857+0800 I -        [conn11] end connection 127.0.0.1:49096 (1 connection now open)
+2017-09-18T21:27:06.857+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49098 #12 (1 connection now open)
+2017-09-18T21:27:06.857+0800 I NETWORK  [conn12] received client metadata from 127.0.0.1:49098 conn12: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:06.861+0800 I -        [conn12] end connection 127.0.0.1:49098 (1 connection now open)
+2017-09-18T21:27:07.523+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49100 #13 (1 connection now open)
+2017-09-18T21:27:07.525+0800 I NETWORK  [conn13] received client metadata from 127.0.0.1:49100 conn13: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:07.527+0800 I -        [conn13] end connection 127.0.0.1:49100 (1 connection now open)
+2017-09-18T21:27:08.006+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49102 #14 (1 connection now open)
+2017-09-18T21:27:08.007+0800 I NETWORK  [conn14] received client metadata from 127.0.0.1:49102 conn14: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:08.012+0800 I -        [conn14] end connection 127.0.0.1:49102 (1 connection now open)
+2017-09-18T21:27:09.014+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49104 #15 (1 connection now open)
+2017-09-18T21:27:09.014+0800 I NETWORK  [conn15] received client metadata from 127.0.0.1:49104 conn15: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:09.015+0800 I -        [conn15] end connection 127.0.0.1:49104 (1 connection now open)
+2017-09-18T21:27:09.264+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49106 #16 (1 connection now open)
+2017-09-18T21:27:09.264+0800 I NETWORK  [conn16] received client metadata from 127.0.0.1:49106 conn16: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T21:27:09.266+0800 I -        [conn16] end connection 127.0.0.1:49106 (1 connection now open)
+2017-09-18T23:58:37.748+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49122 #17 (1 connection now open)
+2017-09-18T23:58:37.749+0800 I NETWORK  [conn17] received client metadata from 127.0.0.1:49122 conn17: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T23:58:37.751+0800 I -        [conn17] end connection 127.0.0.1:49122 (1 connection now open)
+2017-09-18T23:58:37.753+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49124 #18 (1 connection now open)
+2017-09-18T23:58:37.753+0800 I NETWORK  [conn18] received client metadata from 127.0.0.1:49124 conn18: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T23:58:37.755+0800 I -        [conn18] end connection 127.0.0.1:49124 (1 connection now open)
+2017-09-18T23:58:38.503+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49126 #19 (1 connection now open)
+2017-09-18T23:58:38.503+0800 I NETWORK  [conn19] received client metadata from 127.0.0.1:49126 conn19: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T23:58:38.505+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49128 #20 (2 connections now open)
+2017-09-18T23:58:38.505+0800 I -        [conn19] end connection 127.0.0.1:49126 (2 connections now open)
+2017-09-18T23:58:38.505+0800 I NETWORK  [conn20] received client metadata from 127.0.0.1:49128 conn20: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T23:58:38.508+0800 I -        [conn20] end connection 127.0.0.1:49128 (1 connection now open)
+2017-09-18T23:59:39.942+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49130 #21 (1 connection now open)
+2017-09-18T23:59:39.942+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49132 #22 (2 connections now open)
+2017-09-18T23:59:39.942+0800 I NETWORK  [conn22] received client metadata from 127.0.0.1:49132 conn22: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T23:59:39.943+0800 I NETWORK  [conn21] received client metadata from 127.0.0.1:49130 conn21: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-18T23:59:39.960+0800 I -        [conn21] end connection 127.0.0.1:49130 (2 connections now open)
+2017-09-18T23:59:39.960+0800 I -        [conn22] end connection 127.0.0.1:49132 (1 connection now open)
+2017-09-19T10:33:51.058+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49214 #23 (1 connection now open)
+2017-09-19T10:33:51.058+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49216 #24 (2 connections now open)
+2017-09-19T10:33:51.059+0800 I NETWORK  [conn23] received client metadata from 127.0.0.1:49214 conn23: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T10:33:51.068+0800 I NETWORK  [conn24] received client metadata from 127.0.0.1:49216 conn24: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T10:33:51.078+0800 I -        [conn23] end connection 127.0.0.1:49214 (2 connections now open)
+2017-09-19T10:33:51.080+0800 I -        [conn24] end connection 127.0.0.1:49216 (1 connection now open)
+2017-09-19T13:37:25.015+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49224 #25 (1 connection now open)
+2017-09-19T13:37:25.015+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49226 #26 (2 connections now open)
+2017-09-19T13:37:25.015+0800 I NETWORK  [conn26] received client metadata from 127.0.0.1:49226 conn26: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:25.016+0800 I NETWORK  [conn25] received client metadata from 127.0.0.1:49224 conn25: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:25.019+0800 I -        [conn26] end connection 127.0.0.1:49226 (2 connections now open)
+2017-09-19T13:37:25.019+0800 I -        [conn25] end connection 127.0.0.1:49224 (1 connection now open)
+2017-09-19T13:37:25.485+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49228 #27 (1 connection now open)
+2017-09-19T13:37:25.485+0800 I NETWORK  [conn27] received client metadata from 127.0.0.1:49228 conn27: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:25.488+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49230 #28 (2 connections now open)
+2017-09-19T13:37:25.488+0800 I -        [conn27] end connection 127.0.0.1:49228 (2 connections now open)
+2017-09-19T13:37:25.488+0800 I NETWORK  [conn28] received client metadata from 127.0.0.1:49230 conn28: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:25.492+0800 I -        [conn28] end connection 127.0.0.1:49230 (1 connection now open)
+2017-09-19T13:37:28.243+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49232 #29 (1 connection now open)
+2017-09-19T13:37:28.243+0800 I NETWORK  [conn29] received client metadata from 127.0.0.1:49232 conn29: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:28.245+0800 I -        [conn29] end connection 127.0.0.1:49232 (1 connection now open)
+2017-09-19T13:37:30.594+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49234 #30 (1 connection now open)
+2017-09-19T13:37:30.594+0800 I NETWORK  [conn30] received client metadata from 127.0.0.1:49234 conn30: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:30.596+0800 I -        [conn30] end connection 127.0.0.1:49234 (1 connection now open)
+2017-09-19T13:37:31.694+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49236 #31 (1 connection now open)
+2017-09-19T13:37:31.695+0800 I NETWORK  [conn31] received client metadata from 127.0.0.1:49236 conn31: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:31.698+0800 I -        [conn31] end connection 127.0.0.1:49236 (1 connection now open)
+2017-09-19T13:37:32.947+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49238 #32 (1 connection now open)
+2017-09-19T13:37:32.948+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49240 #33 (2 connections now open)
+2017-09-19T13:37:32.948+0800 I NETWORK  [conn33] received client metadata from 127.0.0.1:49240 conn33: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:32.949+0800 I NETWORK  [conn32] received client metadata from 127.0.0.1:49238 conn32: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:32.972+0800 I -        [conn32] end connection 127.0.0.1:49238 (2 connections now open)
+2017-09-19T13:37:32.978+0800 I -        [conn33] end connection 127.0.0.1:49240 (1 connection now open)
+2017-09-19T13:37:33.327+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49242 #34 (1 connection now open)
+2017-09-19T13:37:33.327+0800 I NETWORK  [conn34] received client metadata from 127.0.0.1:49242 conn34: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:33.329+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49244 #35 (2 connections now open)
+2017-09-19T13:37:33.329+0800 I -        [conn34] end connection 127.0.0.1:49242 (2 connections now open)
+2017-09-19T13:37:33.330+0800 I NETWORK  [conn35] received client metadata from 127.0.0.1:49244 conn35: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:33.331+0800 I -        [conn35] end connection 127.0.0.1:49244 (1 connection now open)
+2017-09-19T13:37:33.958+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49246 #36 (1 connection now open)
+2017-09-19T13:37:33.959+0800 I NETWORK  [conn36] received client metadata from 127.0.0.1:49246 conn36: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:33.961+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49248 #37 (2 connections now open)
+2017-09-19T13:37:33.961+0800 I -        [conn36] end connection 127.0.0.1:49246 (2 connections now open)
+2017-09-19T13:37:33.961+0800 I NETWORK  [conn37] received client metadata from 127.0.0.1:49248 conn37: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T13:37:33.962+0800 I -        [conn37] end connection 127.0.0.1:49248 (1 connection now open)
+2017-09-19T14:14:57.266+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49256 #38 (1 connection now open)
+2017-09-19T14:14:57.300+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49258 #39 (2 connections now open)
+2017-09-19T14:17:05.231+0800 I -        [conn38] end connection 127.0.0.1:49256 (2 connections now open)
+2017-09-19T14:17:05.231+0800 I -        [conn39] end connection 127.0.0.1:49258 (1 connection now open)
+2017-09-19T14:17:55.941+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49260 #40 (1 connection now open)
+2017-09-19T14:17:55.976+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49262 #41 (2 connections now open)
+2017-09-19T14:19:00.531+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49264 #42 (3 connections now open)
+2017-09-19T14:19:00.563+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49266 #43 (4 connections now open)
+2017-09-19T14:20:15.829+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49268 #44 (5 connections now open)
+2017-09-19T14:20:15.831+0800 I NETWORK  [conn44] received client metadata from 127.0.0.1:49268 conn44: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:20:15.833+0800 I -        [conn44] end connection 127.0.0.1:49268 (5 connections now open)
+2017-09-19T14:20:36.323+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49270 #45 (5 connections now open)
+2017-09-19T14:20:36.323+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49272 #46 (6 connections now open)
+2017-09-19T14:20:36.323+0800 I NETWORK  [conn46] received client metadata from 127.0.0.1:49272 conn46: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:20:36.324+0800 I NETWORK  [conn45] received client metadata from 127.0.0.1:49270 conn45: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:20:36.327+0800 I -        [conn46] end connection 127.0.0.1:49272 (6 connections now open)
+2017-09-19T14:20:36.327+0800 I -        [conn45] end connection 127.0.0.1:49270 (5 connections now open)
+2017-09-19T14:20:36.647+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49274 #47 (5 connections now open)
+2017-09-19T14:20:36.648+0800 I NETWORK  [conn47] received client metadata from 127.0.0.1:49274 conn47: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:20:36.649+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49276 #48 (6 connections now open)
+2017-09-19T14:20:36.650+0800 I -        [conn47] end connection 127.0.0.1:49274 (6 connections now open)
+2017-09-19T14:20:36.650+0800 I NETWORK  [conn48] received client metadata from 127.0.0.1:49276 conn48: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:20:36.652+0800 I -        [conn48] end connection 127.0.0.1:49276 (5 connections now open)
+2017-09-19T14:24:33.142+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49278 #49 (5 connections now open)
+2017-09-19T14:24:33.144+0800 I ACCESS   [conn49] SCRAM-SHA-1 authentication failed for root on admin from client 127.0.0.1:49278 ; UserNotFound: Could not find user root@admin
+2017-09-19T14:24:37.637+0800 I -        [conn49] end connection 127.0.0.1:49278 (5 connections now open)
+2017-09-19T14:26:29.813+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49280 #50 (5 connections now open)
+2017-09-19T14:26:29.814+0800 I ACCESS   [conn50] SCRAM-SHA-1 authentication failed for root on admin from client 127.0.0.1:49280 ; UserNotFound: Could not find user root@admin
+2017-09-19T14:26:31.339+0800 I -        [conn50] end connection 127.0.0.1:49280 (5 connections now open)
+2017-09-19T14:26:49.370+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49282 #51 (5 connections now open)
+2017-09-19T14:26:49.371+0800 I ACCESS   [conn51]  authenticate db: admin { authenticate: 1, nonce: "xxx", user: "root", key: "xxx" }
+2017-09-19T14:26:49.371+0800 I ACCESS   [conn51] Failed to authenticate root@admin with mechanism MONGODB-CR: AuthenticationFailed: UserNotFound: Could not find user root@admin
+2017-09-19T14:26:51.153+0800 I -        [conn51] end connection 127.0.0.1:49282 (5 connections now open)
+2017-09-19T14:26:56.794+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49284 #52 (5 connections now open)
+2017-09-19T14:26:56.826+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49286 #53 (6 connections now open)
+2017-09-19T14:26:59.902+0800 I -        [conn53] end connection 127.0.0.1:49286 (6 connections now open)
+2017-09-19T14:26:59.902+0800 I -        [conn52] end connection 127.0.0.1:49284 (5 connections now open)
+2017-09-19T14:27:04.390+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49288 #54 (5 connections now open)
+2017-09-19T14:27:04.427+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49290 #55 (6 connections now open)
+2017-09-19T14:27:11.460+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49292 #56 (7 connections now open)
+2017-09-19T14:27:11.494+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49294 #57 (8 connections now open)
+2017-09-19T14:27:50.383+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49296 #58 (9 connections now open)
+2017-09-19T14:27:50.385+0800 I ACCESS   [conn58] SCRAM-SHA-1 authentication failed for admin on admin from client 127.0.0.1:49296 ; UserNotFound: Could not find user admin@admin
+2017-09-19T14:27:52.296+0800 I -        [conn58] end connection 127.0.0.1:49296 (9 connections now open)
+2017-09-19T14:33:39.753+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49300 #59 (9 connections now open)
+2017-09-19T14:33:39.785+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49302 #60 (10 connections now open)
+2017-09-19T14:36:00.367+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49304 #61 (11 connections now open)
+2017-09-19T14:36:00.368+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49306 #62 (12 connections now open)
+2017-09-19T14:36:00.370+0800 I NETWORK  [conn62] received client metadata from 127.0.0.1:49306 conn62: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:36:00.383+0800 I NETWORK  [conn61] received client metadata from 127.0.0.1:49304 conn61: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:36:00.388+0800 I -        [conn62] end connection 127.0.0.1:49306 (12 connections now open)
+2017-09-19T14:36:00.390+0800 I -        [conn61] end connection 127.0.0.1:49304 (11 connections now open)
+2017-09-19T14:36:00.735+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49308 #63 (11 connections now open)
+2017-09-19T14:36:00.735+0800 I NETWORK  [conn63] received client metadata from 127.0.0.1:49308 conn63: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:36:00.737+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49310 #64 (12 connections now open)
+2017-09-19T14:36:00.737+0800 I -        [conn63] end connection 127.0.0.1:49308 (12 connections now open)
+2017-09-19T14:36:00.737+0800 I NETWORK  [conn64] received client metadata from 127.0.0.1:49310 conn64: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:36:00.739+0800 I -        [conn64] end connection 127.0.0.1:49310 (11 connections now open)
+2017-09-19T14:36:01.655+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49312 #65 (11 connections now open)
+2017-09-19T14:36:01.655+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49314 #66 (12 connections now open)
+2017-09-19T14:36:01.656+0800 I NETWORK  [conn66] received client metadata from 127.0.0.1:49314 conn66: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:36:01.656+0800 I NETWORK  [conn65] received client metadata from 127.0.0.1:49312 conn65: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:36:01.673+0800 I -        [conn65] end connection 127.0.0.1:49312 (12 connections now open)
+2017-09-19T14:36:01.673+0800 I -        [conn66] end connection 127.0.0.1:49314 (11 connections now open)
+2017-09-19T14:36:02.569+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49316 #67 (11 connections now open)
+2017-09-19T14:36:02.570+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49318 #68 (12 connections now open)
+2017-09-19T14:36:02.570+0800 I NETWORK  [conn67] received client metadata from 127.0.0.1:49316 conn67: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:36:02.572+0800 I -        [conn67] end connection 127.0.0.1:49316 (12 connections now open)
+2017-09-19T14:36:02.572+0800 I NETWORK  [conn68] received client metadata from 127.0.0.1:49318 conn68: { driver: { name: "nodejs", version: "2.2.31" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.26.2.el7.x86_64" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.15" }
+2017-09-19T14:36:02.574+0800 I -        [conn68] end connection 127.0.0.1:49318 (11 connections now open)
+2017-09-19T14:36:17.086+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49320 #69 (11 connections now open)
+2017-09-19T14:36:17.118+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49322 #70 (12 connections now open)
+2017-09-19T14:37:56.028+0800 I COMMAND  [conn69] CMD: drop 123.temp
+2017-09-19T14:38:11.931+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49324 #71 (13 connections now open)
+2017-09-19T14:38:11.964+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49326 #72 (14 connections now open)
+2017-09-19T14:38:21.847+0800 I -        [conn70] end connection 127.0.0.1:49322 (14 connections now open)
+2017-09-19T14:38:21.847+0800 I -        [conn69] end connection 127.0.0.1:49320 (13 connections now open)
+2017-09-19T14:38:24.250+0800 I -        [conn60] end connection 127.0.0.1:49302 (12 connections now open)
+2017-09-19T14:38:24.250+0800 I -        [conn59] end connection 127.0.0.1:49300 (11 connections now open)
+2017-09-19T14:38:25.552+0800 I -        [conn57] end connection 127.0.0.1:49294 (10 connections now open)
+2017-09-19T14:38:25.553+0800 I -        [conn56] end connection 127.0.0.1:49292 (9 connections now open)
+2017-09-19T14:38:27.423+0800 I -        [conn43] end connection 127.0.0.1:49266 (8 connections now open)
+2017-09-19T14:38:27.424+0800 I -        [conn42] end connection 127.0.0.1:49264 (7 connections now open)
+2017-09-19T14:38:31.288+0800 I -        [conn41] end connection 127.0.0.1:49262 (6 connections now open)
+2017-09-19T14:38:31.288+0800 I -        [conn40] end connection 127.0.0.1:49260 (5 connections now open)
+2017-09-19T14:42:26.916+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49328 #73 (5 connections now open)
+2017-09-19T14:42:26.918+0800 I ACCESS   [conn73] SCRAM-SHA-1 authentication failed for root on admin from client 127.0.0.1:49328 ; UserNotFound: Could not find user root@admin
+2017-09-19T14:42:26.923+0800 I -        [conn73] end connection 127.0.0.1:49328 (5 connections now open)
+2017-09-19T14:42:31.968+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49330 #74 (5 connections now open)
+2017-09-19T14:42:31.969+0800 I ACCESS   [conn74]  authenticate db: admin { authenticate: 1, nonce: "xxx", user: "root", key: "xxx" }
+2017-09-19T14:42:31.969+0800 I ACCESS   [conn74] Failed to authenticate root@admin with mechanism MONGODB-CR: AuthenticationFailed: UserNotFound: Could not find user root@admin
+2017-09-19T14:42:31.974+0800 I -        [conn74] end connection 127.0.0.1:49330 (5 connections now open)
+2017-09-19T14:42:40.998+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49332 #75 (5 connections now open)
+2017-09-19T14:42:40.998+0800 I ACCESS   [conn75]  authenticate db: admin { authenticate: 1, nonce: "xxx", user: "root", key: "xxx" }
+2017-09-19T14:42:40.998+0800 I ACCESS   [conn75] Failed to authenticate root@admin with mechanism MONGODB-CR: AuthenticationFailed: UserNotFound: Could not find user root@admin
+2017-09-19T14:42:41.004+0800 I -        [conn75] end connection 127.0.0.1:49332 (5 connections now open)
+2017-09-19T14:44:43.088+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49334 #76 (5 connections now open)
+2017-09-19T14:44:43.088+0800 I NETWORK  [conn76] received client metadata from 127.0.0.1:49334 conn76: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.5" }, os: { type: "Linux", name: "CentOS Linux release 7.2.1511 (Core) ", architecture: "x86_64", version: "Kernel 3.10.0-514.26.2.el7.x86_64" } }
+2017-09-19T14:52:15.180+0800 I -        [conn76] end connection 127.0.0.1:49334 (5 connections now open)
+2017-09-19T14:52:50.821+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49336 #77 (5 connections now open)
+2017-09-19T14:52:50.822+0800 I NETWORK  [conn77] received client metadata from 127.0.0.1:49336 conn77: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.5" }, os: { type: "Linux", name: "CentOS Linux release 7.2.1511 (Core) ", architecture: "x86_64", version: "Kernel 3.10.0-514.26.2.el7.x86_64" } }
+2017-09-19T14:53:04.529+0800 I COMMAND  [conn77] terminating, shutdown command received
+2017-09-19T14:53:04.529+0800 I NETWORK  [conn77] shutdown: going to close listening sockets...
+2017-09-19T14:53:04.529+0800 I NETWORK  [conn77] closing listening socket: 7
+2017-09-19T14:53:04.529+0800 I NETWORK  [conn77] closing listening socket: 8
+2017-09-19T14:53:04.529+0800 I NETWORK  [conn77] removing socket file: /tmp/mongodb-27017.sock
+2017-09-19T14:53:04.529+0800 I NETWORK  [conn77] shutdown: going to flush diaglog...
+2017-09-19T14:53:04.529+0800 I FTDC     [conn77] Shutting down full-time diagnostic data capture
+2017-09-19T14:53:04.531+0800 I STORAGE  [conn77] WiredTigerKVEngine shutting down
+2017-09-19T14:53:04.554+0800 I STORAGE  [conn77] shutdown: removing fs lock...
+2017-09-19T14:53:04.554+0800 I CONTROL  [conn77] now exiting
+2017-09-19T14:53:04.554+0800 I CONTROL  [conn77] shutting down with code:0
