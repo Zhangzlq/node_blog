@@ -101,7 +101,7 @@
 <script type="text/template" id="AllComment">
     <ul class="msg">
         <li class="msgname">
-            <img class="avatar" src="../images/t2.jpg"/>
+            <img class="avatar" src='{{=_image}}'/>
             <span class="commentname">{{= name.substring(0,200).replace(/<[^>]+>/g,"") }}</span><br>
             <span class="commenttime">发布于：{{= date }}</span>
         </li>
@@ -111,8 +111,39 @@
     </ul>
 </script>
 <script type="text/javascript">
+
+// 随机调用图片开始
+// var useRand = 0;
+// images = new Array;
+// images[1] = new Image();
+// images[1].src = "img/a1.jpg";
+// images[2] = new Image();
+// images[2].src = "img/a2.jpg";
+// images[3] = new Image();
+// images[3].src = "img/a3.jpg";
+// images[4] = new Image();
+// images[4].src = "img/a4.jpg";
+// function swapPic() {
+//     var imgnum = images.length - 1;
+//     do {
+//         var rand1 = ~~(Math.random() * a.length)
+//     } while (rand1 == useRand);
+//     useRand = rand1;
+//     document.randimg.src = images[useRand].src;
+// }
+// function swapPic(){
+//     let rand=~~(Math.random() * images.length)
+//     let rand_src=images[rand].src;
+// }
+// 随机调用图片结束
+
+
     $(document).ready(function () {
+
+
         $("#submit").click(function () {
+            var rand=~~(Math.random() * 13)+1;
+            var _image='../images/head_'+rand+'.png';
             var name = $("#name").val();
             var email = $("#email").val();
             var content = $("#content").val();
@@ -135,6 +166,7 @@
                 return;
             }
             $.post("/doComment",{
+                '_image':_image,
                 "name" : name,
                 "email" : email,
                 "content" : content
@@ -149,7 +181,7 @@
         //得到模板
         var compiled = _.template($("#AllComment").html());
         getPage(0);
-        //AJAX读取文章列表
+        //AJAX读取评论列表
         function getPage(page) {
             $.post("/getComment?page="+page,function (result) {
                 for(var i = 0; i<result.allResult.length; i++){

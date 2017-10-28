@@ -1,4 +1,4 @@
-var express      = require("express");
+﻿var express      = require("express");
 var app          = express();
 var router       = require("./routers/router.js");
 var path         = require('path');
@@ -133,4 +133,4 @@ console.log("Server running");
 
 
 
-app.listen(3389);
+app.listen(80);

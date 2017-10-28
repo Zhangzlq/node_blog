@@ -1,4 +1,4 @@
-var formidable = require('formidable');
+﻿var formidable = require('formidable');
 var db = require("../model/db.js");
 var md5 = require("../model/md5.js");
 var fs = require("fs");
@@ -316,6 +316,7 @@ exports.showComment = function (req, res ,result) {
 exports.doComment = function (req, res, result) {
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
+        var _image = fields._image;
         var name = fields.name;
         var email = fields.email;
         var content = fields.content;
@@ -324,6 +325,7 @@ exports.doComment = function (req, res, result) {
             var date = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
             db.insertOne("comment", {
                 "ID" : parseInt(allCount) + 1,
+                '_image' : _image,
                 "name" : name,
                 "email" : email,
                 "content" : content,

@@ -1,36 +1,45 @@
 {
     "name": "ueditor",
-    "title": "ueditor",
-    "description": "UEditor富文本web编辑器",
-    "version": "1.4.3",
-    "homepage": "http://ueditor.baidu.com/",
+    "decription": "nodejs for ueditor",
     "author": {
-        "name": "f-cube @ FEX",
-        "url": "http://fex.baidu.com"
+        "name": "Night_elf"
+    },
+    "version": "1.2.3",
+    "dependencies": {
+        "busboy": "^0.2.9",
+        "fs-extra": "^0.11.0",
+        "node-snowflake": "0.0.1",
+        "qn": "^1.3.0",
+        "fdfs": "^1.0.4"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/fex-team/ueditor.git"
+        "url": "https://github.com/netpi/ueditor"
     },
-    "keywords": [
-        "ueditor",
-        "web editor",
-        "javascript"
-    ],
+    "main": "index.js",
+    "description": "",
     "bugs": {
-        "url": "https://github.com/fex-team/ueditor/issues"
+        "url": "https://github.com/netpi/ueditor/issues"
     },
-    "dependencies": {
-        "grunt": "~0.4.1",
-        "grunt-contrib-concat": "~0.3.0",
-        "grunt-contrib-cssmin": "~0.6.0",
-        "grunt-closurecompiler": "~0.9.9",
-        "grunt-contrib-copy": "~0.4.0",
-        "grunt-transcoding": "~0.1.1",
-        "grunt-text-replace": "~0.3.9",
-        "grunt-contrib-clean": "~0.5.0"
+    "homepage": "https://github.com/netpi/ueditor",
+    "_id": "ueditor@1.0.0",
+    "scripts": {},
+    "_shasum": "28993ad1dbde8b1d83452400b1c77398f18e630e",
+    "_from": "ueditor@^1.0.0",
+    "gitHead": "2538eb8e109572939df8b8a02623f53aaf4e0de4",
+    "_npmVersion": "1.4.14",
+    "_npmUser": {
+        "name": "netpi",
+        "email": "hellonewworld@vip.qq.com"
     },
-    "devDependencies": {
-        "grunt": "~0.4.1"
-    }
+    "maintainers": [{
+        "name": "netpi",
+        "email": "hellonewworld@vip.qq.com"
+    }],
+    "dist": {
+        "shasum": "28993ad1dbde8b1d83452400b1c77398f18e630e",
+        "tarball": "http://registry.npmjs.org/ueditor/-/ueditor-1.0.0.tgz"
+    },
+    "directories": {},
+    "_resolved": "https://registry.npmjs.org/ueditor/-/ueditor-1.0.0.tgz"
 }

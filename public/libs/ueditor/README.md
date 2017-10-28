@@ -1,90 +1,216 @@
-Get Started
-=====
+# Node.js : ueditor
 
-## ueditor富文本编辑器介绍
 
-UEditor是由百度web前端研发部开发所见即所得富文本web编辑器，具有轻量，可定制，注重用户体验等特点，开源基于MIT协议，允许自由使用和修改代码。
+[UEditor](https://github.com/fex-team/ueditor) 官方支持的版本有PHP JSP ASP .NET.
 
-## 入门部署和体验 ##
+ueditor for nodejs 可以让你的UEditor支持nodejs
 
-### 第一步：下载编辑器 ###
+## ueditor@1.0.0 已经全面升级 。
 
-到官网下载ueditor最新版：[[官网地址]](http://ueditor.baidu.com/website/download.html#ueditor "官网下载地址")
+##Installation
 
-### 第二步：创建demo文件 ###
-解压下载的包，在解压后的目录创建demo.html文件，填入下面的html代码
+```
+ npm install ueditor --save
 
-```html
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<title>ueditor demo</title>
-</head>
-<body>
-	<!-- 加载编辑器的容器 -->
-	<script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
-	<!-- 配置文件 -->
-	<script type="text/javascript" src="ueditor.config.js"></script>
-	<!-- 编辑器源码文件 -->
-	<script type="text/javascript" src="ueditor.all.js"></script>
-	<!-- 实例化编辑器 -->
-	<script type="text/javascript">
-	    var ue = UE.getEditor('container');
-	</script>
-</body>
-</html>
 ```
 
-### 第三步：在浏览器打开demo.html ###
 
-如果看到了下面这样的编辑器，恭喜你，初次部署成功！
+## Usage
 
-![部署成功](http://fex.baidu.com/ueditor/doc/images/demo.png)
-
-### 自定义的参数
-
-编辑器有很多可自定义的参数项，在实例化的时候可以传入给编辑器：
 ```javascript
-var ue = UE.getEditor('container', {
-    autoHeight: false
-});
+
+
+var bodyParser = require('body-parser')
+var ueditor = require("ueditor")
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+app.use(bodyParser.json());
+
+// /ueditor 入口地址配置 https://github.com/netpi/ueditor/blob/master/example/public/ueditor/ueditor.config.js
+// 官方例子是这样的 serverUrl: URL + "php/controller.php"
+// 我们要把它改成 serverUrl: URL + 'ue'
+app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res, next) {
+
+  // ueditor 客户发起上传图片请求
+
+  if(req.query.action === 'uploadimage'){
+
+    // 这里你可以获得上传图片的信息
+    var foo = req.ueditor;
+    console.log(foo.filename); // exp.png
+    console.log(foo.encoding); // 7bit
+    console.log(foo.mimetype); // image/png
+
+    // 下面填写你要把图片保存到的路径 （ 以 path.join(__dirname, 'public') 作为根路径）
+    var img_url = 'yourpath';
+    res.ue_up(img_url); //你只要输入要保存的地址 。保存操作交给ueditor来做
+  }
+  //  客户端发起图片列表请求
+  else if (req.query.action === 'listimage'){
+    var dir_url = 'your img_dir'; // 要展示给客户端的文件夹路径
+    res.ue_list(dir_url) // 客户端会列出 dir_url 目录下的所有图片
+  }
+  // 客户端发起其它请求
+  else {
+
+    res.setHeader('Content-Type', 'application/json');
+    // 这里填写 ueditor.config.json 这个文件的路径
+    res.redirect('/ueditor/ueditor.config.json')
+}}));
+
 ```
-
-配置项也可以通过ueditor.config.js文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)
-
-### 设置和读取编辑器的内容
-
-通getContent和setContent方法可以设置和读取编辑器的内容
+### 七牛上传
 ```javascript
-var ue = UE.getContent();
-ue.ready(function(){
-    //设置编辑器的内容
-    ue.setContent('hello');
-    //获取html内容，返回: <p>hello</p>
-    var html = ue.getContent();
-    //获取纯文本内容，返回: hello
-    var txt = ue.getContentTxt();
-});
+
+var bodyParser = require('body-parser')
+var ueditor = require("ueditor")
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+app.use(bodyParser.json());
+
+// 支持七牛上传，如有需要请配置好qn参数，如果没有qn参数则存储在本地
+app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), {
+    qn: {
+        accessKey: 'your access key',
+        secretKey: 'your secret key',
+        bucket: 'your bucket name',
+        origin: 'http://{bucket}.u.qiniudn.com'
+    }
+}, function(req, res, next) {
+  // ueditor 客户发起上传图片请求
+  var imgDir = '/img/ueditor/'
+  if(req.query.action === 'uploadimage'){
+    var foo = req.ueditor;
+
+    var imgname = req.ueditor.filename;
+
+    
+    res.ue_up(imgDir); //你只要输入要保存的地址 。保存操作交给ueditor来做
+  }
+  //  客户端发起图片列表请求
+  else if (req.query.action === 'listimage'){
+    
+    res.ue_list(imgDir);  // 客户端会列出 dir_url 目录下的所有图片
+  }
+  // 客户端发起其它请求
+  else {
+
+    res.setHeader('Content-Type', 'application/json');
+    res.redirect('/ueditor/ueditor.config.json')
+}}));
+
+```
+### FDFS上传
+```javascript
+
+var bodyParser = require('body-parser')
+var ueditor = require("ueditor")
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+app.use(bodyParser.json());
+
+//FDFS config 参数配置
+var ueditorConfig = {
+  fdfs: {
+    /* Require 必须 */
+    upload: {
+      host: '192.168.0.40', //fdfs 上传服务器 host
+      port: '22122'  // 上传服务器端口(一般默认22122)
+    },
+    download: {
+      host: '192.168.0.82' //fdfs 下载服务器host
+    },
+    /* Require 必须 */
+    /* 可缺省 */
+    defaultExt: 'jpg', //默认后缀为png
+    charset: 'utf8', //默认为utf8
+    timeout: 20 * 1000 //默认超时时间10s
+    /* 可缺省 */
+  }
+};
+
+// 支持FDFS上传，upload跟download字段必填
+app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'),  ueditorConfig, function(req, res, next) {
+  // ueditor 客户发起上传图片请求
+  var imgDir = '/img/ueditor/'
+  if(req.query.action === 'uploadimage'){
+    var foo = req.ueditor;
+
+    var imgname = req.ueditor.filename;
+
+    
+    res.ue_up(imgDir); //你只要输入要保存的地址 。保存操作交给ueditor来做
+  }
+  //  客户端发起图片列表请求
+  else if (req.query.action === 'listimage'){
+    
+    res.ue_list(imgDir);  // 客户端会列出 dir_url 目录下的所有图片
+  }
+  // 客户端发起其它请求
+  else {
+
+    res.setHeader('Content-Type', 'application/json');
+    res.redirect('/ueditor/ueditor.config.json')
+}}));
+
 ```
 
-ueditor的更多API请看[API 文档](http://ueditor.baidu.com/doc "ueditor API 文档")
+### 多类型文件上传 （附件 视频 图片）
+```javascript
 
-## 相关链接 ##
+var bodyParser = require('body-parser')
+var ueditor = require("ueditor")
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+app.use(bodyParser.json());
 
-ueditor 官网：[http://ueditor.baidu.com](http://ueditor.baidu.com "ueditor 官网")
+app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res, next) {
+  var imgDir = '/img/ueditor/' //默认上传地址为图片
+  var ActionType = req.query.action;
+    if (ActionType === 'uploadimage' || ActionType === 'uploadfile' || ActionType === 'uploadvideo') {
+        var file_url = imgDir;//默认上传地址为图片
+        /*其他上传格式的地址*/
+        if (ActionType === 'uploadfile') {
+            file_url = '/file/ueditor/'; //附件保存地址
+        }
+        if (ActionType === 'uploadvideo') {
+            file_url = '/video/ueditor/'; //视频保存地址
+        }
+        res.ue_up(file_url); //你只要输入要保存的地址 。保存操作交给ueditor来做
+        res.setHeader('Content-Type', 'text/html');
+    }
+  //客户端发起图片列表请求
+  else if (ActionType === 'listimage'){
+    
+    res.ue_list(imgDir);  // 客户端会列出 dir_url 目录下的所有图片
+  }
+  // 客户端发起其它请求
+  else {
+    res.setHeader('Content-Type', 'application/json');
+    res.redirect('/ueditor/ueditor.config.json')
+}}));
 
-ueditor API 文档：[http://ueditor.baidu.com/doc](http://ueditor.baidu.com/doc "ueditor API 文档")
+```
 
-ueditor github 地址：[http://github.com/fex-team/ueditor](http://github.com/fex-team/ueditor "ueditor github 地址")
+### 上传配置
+```javascript
+app.use("/ueditor/ue", static_url, config = {}, callback);
+```
+当config为空时，会默认把图片上传到 static_url + '/img/ueditor' 目录下。   
+比如例子“Usage”中图片会上传到项目的 public/img/ueditor 目录。  
 
-## 详细文档
+当配置了 config.qn 图片则只会上传到七牛服务器而不会上传到项目目录。    
+同时上传到七牛和项目目录，只需配置 config.local 即可
+```javascript
+config = {
+  qn: { ... },
+  local: true 
+}
+```
 
-ueditor 文档：[http://fex.baidu.com/ueditor/](http://fex.baidu.com/ueditor/)
+你可以来[ueditor:nodejs](http://blog.netpi.me/nodejs/ueditor-nodejs)给作者留言
 
-
-
-## 联系我们 ##
-
-email：[ueditor@baidu.com](mailto://email:ueditor@baidu.com "发邮件给ueditor开发组")
-issue：[github issue](http://github.com/fex-team/ueditor/issues "ueditor 论坛")
