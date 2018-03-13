@@ -1,22 +1,5 @@
-##blog
 
 Nodejs(Express)+MongoDB+jQuery+Bootstrap Personal blog.
-
-## 这是一个开源的个人博客系统。
-
-个人用来练手，经过改进的博客~
-
-源代码在这里[基于Nodejs+Mongo+jQuery+Bootstrap构建个人博客系统。](https://github.com/scottjeremy/EJblog)
-
-## 技术选型：
-
-* 后台：采用Express作为框架 MongoDB作为数据库 ejs作为模板引擎  
-
-* 前台：采用jQuery库 Bootstrap作为前端UI框架
- 
-## 功能
-
-* 文章：发布文章，文章分类，删除文章 获取访问用户的地理位置（采用CX网和高德的API）
 
 ## 目录结构：
 
@@ -37,9 +20,8 @@ package.json 文件依赖配置包
 
 ## Install
 
-##### 安装EJblog前要先安装node环境和MongoDB数据库，具体安装请自行Google。
+##### 安装EJblog前要先安装node环境和MongoDB数据库
 
-##### 作为例子，我已经写入一些数据可提供使用观看。数据位置在data文件夹内
 
 第一步：
 
@@ -61,4 +43,4 @@ package.json 文件依赖配置包
 ```
   node app.js
 ```
-#### 登陆后台 帐号：123123 密码：123123
+
